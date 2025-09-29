@@ -8,10 +8,8 @@ public class Main {
         String tipoDeConta;
         boolean negativado;
         double saldo;
-        double sacado;
-        double depositado;
-
-
+        double transferir;
+        double receber;
 
         //menu
         int opcao = 0;
@@ -57,14 +55,15 @@ public class Main {
 
                 case 2:
                     System.out.println("Quanto deseja transferir?");
-                    sacado = scanner.nextDouble();
-                    saldo = saldo - sacado;
+                    transferir = scanner.nextInt();
+                    saldo = saldo - transferir;
                     break;
 
                 case 3:
                     System.out.println("Quanto recebeu?");
-                    depositado = scanner.nextDouble();
-                    saldo = saldo + depositado;
+                    receber = scanner.nextInt();
+                    saldo = saldo + receber;
+
                     break;
 
                 case 4:
