@@ -8,6 +8,10 @@ public class Main {
         String tipoDeConta;
         boolean negativado;
         double saldo;
+        double sacado;
+        double depositado;
+
+
 
         //menu
         int opcao = 0;
@@ -15,7 +19,7 @@ public class Main {
 
         System.out.println("==============");
         System.out.print("Qual o nome do cliente? ");
-        nome = scanner.nextLine(); // Lê o nome completo
+        nome = scanner.nextLine();
 
         System.out.print("Tipo de conta? ");
         tipoDeConta = scanner.nextLine();
@@ -53,10 +57,14 @@ public class Main {
 
                 case 2:
                     System.out.println("Quanto deseja transferir?");
+                    sacado = scanner.nextDouble();
+                    saldo = saldo - sacado;
                     break;
 
                 case 3:
                     System.out.println("Quanto recebeu?");
+                    depositado = scanner.nextDouble();
+                    saldo = saldo + depositado;
                     break;
 
                 case 4:
